@@ -77,7 +77,7 @@ const App: () => Node = () => {
          
           
         </View>
-        <Button title="Navigate to Native Screen" onPress={() => Navigation.navigateToNative()}/>
+        <Button title="Navigate to Native Screen" onPress={() => Navigation.navigateToNative(200.50)}/>
       </ScrollView>
     </SafeAreaView>
   );

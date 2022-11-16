@@ -24,12 +24,14 @@ public class NavigationModule  extends ReactContextBaseJavaModule {
     } //The name of the component when it is called in the RN code
 
     @ReactMethod
-    public void navigateToNative(){
+    public void navigateToNative(Double amount){
         ReactApplicationContext context = getReactApplicationContext();
         intent = new Intent(context,Main2Activity.class);
 
+
         if (intent.resolveActivity(context.getPackageManager()) != null) {
             intent.setFlags((Intent.FLAG_ACTIVITY_NEW_TASK));
+            intent.putExtra("amount",amount);
             context.startActivity(intent);
         }
     }
